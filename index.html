@@ -494,7 +494,7 @@ function Tag({ tag }) {
       fontSize:10, fontWeight:800, padding:'3px 10px', letterSpacing:'0.2em',
       display:'inline-block',
       animation: flash ? 'flash 2.5s ease-in-out infinite' : 'none',
-    }}>{tag}</span>
+    }}>{tag==='BREACH'?'BRECHA':tag}</span>
   );
 }
 function SevBadge({ severity, cvss, tag }) {
@@ -511,8 +511,10 @@ function Header({ filter, setFilter, showTicker, posts }) {
   const cats = ['TODOS','BREACH','IA','TECNOLOGÍA'];
   const latestRawDate = posts.reduce((m,post)=>post.date>m?post.date:m,'');
   const latestDate = latestRawDate ? fmtDate(latestRawDate) : '--/--/----';
-  const todayRaw = new Date().toISOString().slice(0,10);
+  const _now = new Date();
+  const todayRaw = `${_now.getFullYear()}-${p(_now.getMonth()+1)}-${p(_now.getDate())}`;
   const publishedToday = posts.filter(p=>p.date===todayRaw).length;
+  const thisMonthCount = posts.filter(p=>(p.date||'').slice(0,7)===todayRaw.slice(0,7)).length;
   const editionDate = time.toLocaleDateString('es-ES',{day:'2-digit',month:'2-digit',year:'numeric'});
 
   return (
@@ -551,8 +553,8 @@ function Header({ filter, setFilter, showTicker, posts }) {
               <div style={{fontSize:30,fontWeight:800,lineHeight:1,color:'#000'}}>{String(posts.length).padStart(2,'0')}</div>
             </div>
             <div className="edition-stat" style={{border:'2px solid #000',padding:'8px 8px 6px'}}>
-              <div style={{fontSize:10,letterSpacing:'0.12em',color:'#555'}}>HOY</div>
-              <div style={{fontSize:30,fontWeight:800,lineHeight:1,color:'#000'}}>{String(publishedToday).padStart(2,'0')}</div>
+              <div style={{fontSize:10,letterSpacing:'0.12em',color:'#555'}}>ESTE MES</div>
+              <div style={{fontSize:30,fontWeight:800,lineHeight:1,color:'#000'}}>{String(thisMonthCount).padStart(2,'0')}</div>
             </div>
             <div className="edition-stat" style={{border:'2px solid #000',padding:'8px 8px 6px'}}>
               <div style={{fontSize:10,letterSpacing:'0.12em',color:'#555'}}>ÚLTIMA FECHA</div>
@@ -590,7 +592,7 @@ function Header({ filter, setFilter, showTicker, posts }) {
                 e.currentTarget.style.transform='none';
                 e.currentTarget.style.boxShadow='none';
               }}
-            >{cat}</button>
+            >{cat==='BREACH'?'BRECHAS':cat}</button>
           );
         })}
         <div className="filter-spacer" style={{flex:1,borderBottom:'2px solid #000',borderRight:'2px solid #000'}}/>
