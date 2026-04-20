@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": 3005,
+      "tag": "IA",
+      "date": "2026-04-17",
+      "title": "Anthropic lanza Claude Design: prototipos, slides y one-pagers generados por IA",
+      "summary": "Anthropic presenta Claude Design, un producto experimental que convierte prompts en prototipos, presentaciones y one-pagers exportables a Canva, PDF, URL o PPTX. Figma cae un 7% tras el anuncio.",
+      "body": "Anthropic presentó el 17 de abril de 2026 Claude Design, un producto experimental que lleva a Claude al terreno del diseño visual: prototipos, slides y one-pagers generados a partir de una conversación.\n\n# Qué pasó\n\nAnthropic anunció Claude Design en research preview para suscriptores de Claude Pro, Max, Team y Enterprise. El producto permite a cualquier usuario, sin herramientas de diseño previas, pasar de idea a entregable visual hablando con Claude en lenguaje natural. Está construido sobre Claude Opus 4.7. El mismo día del anuncio, la acción de Figma cayó cerca de un 7% como reacción del mercado.\n\n# Qué hace\n\n- Prototipos interactivos a partir de una descripción\n- Presentaciones de diapositivas completas\n- One-pagers y mockups listos para compartir\n- Integración nativa con Canva: exportas y sigues editando colaborativamente\n- Exportación a PDF, URL pública y PPTX\n- Lectura del codebase y design tokens de tu empresa para mantener consistencia visual\n\n# Qué significa / impacto\n\nEl movimiento reduce drásticamente la fricción entre idea y entregable visual. Equipos sin diseñador dedicado pueden generar materiales coherentes con su identidad corporativa en minutos. Para diseñadores profesionales la herramienta se posiciona como acelerador de borradores y no sustituto directo, aunque la caída bursátil de Figma indica que el mercado lo lee como amenaza estructural a las herramientas tradicionales.\n\nEl enfoque técnico más interesante es la lectura automática de design systems: la IA deja de generar estética genérica y empieza a respetar componentes, colores y tipografía definidos por tu equipo.\n\n# Qué hacer ahora\n\n1. Si tienes plan Pro, Max, Team o Enterprise, activa el research preview\n2. Prueba con un entregable real de tu flujo (pitch deck, landing mockup, one-pager)\n3. Evalúa exportando a Canva para ver calidad y facilidad de iteración posterior\n4. Si tienes design system documentado, conéctalo y compara resultados con y sin contexto\n5. Define qué tipo de entregables delegas a Claude Design y cuáles siguen necesitando diseñador\n\n# Límites y cautelas\n\n- Research preview: esperar bugs y cambios de comportamiento\n- Requiere plan de pago Claude (no Free)\n- La calidad del output depende mucho de cómo esté documentado tu design system\n- No reemplaza branding, arquitectura de información compleja ni diseño de producto profundo\n\n# Conclusión\n\nClaude Design apunta a capturar el segmento \"necesito algo visual rápido y decente\". Es útil para equipos sin diseño dedicado y como acelerador de borradores para profesionales. El impacto real se verá cuando salga de preview y se mida calidad sostenida frente a herramientas consolidadas como Figma o Canva.",
+      "severity": null,
+      "cvss": null,
+      "readTime": "3 min"
+    },
+    {
       "id": 3004,
       "tag": "BREACH",
       "date": "2026-04-19",
