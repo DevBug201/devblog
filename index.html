@@ -906,7 +906,7 @@ function Tweaks({ tweaks, setTweaks, visible }) {
 /* ── APP ── */
 function App() {
   const [tweaks,setTweaks]=useState(TWEAK_DEFAULTS);
-  const [tweaksVis,setTweaksVis]=useState(false);
+  const tweaksVis=false;
   const [posts,setPosts]=useState(SEED);
   const [filter,setFilter]=useState('TODOS');
   const [activePost,setActivePost]=useState(null);
@@ -921,14 +921,6 @@ function App() {
     if(activePost!=null) localStorage.setItem('dvblog_active',activePost);
     else localStorage.removeItem('dvblog_active');
   },[activePost]);
-  useEffect(()=>{
-    window.addEventListener('message',e=>{
-      if(e.data?.type==='__activate_edit_mode') setTweaksVis(true);
-      if(e.data?.type==='__deactivate_edit_mode') setTweaksVis(false);
-    });
-    window.parent.postMessage({type:'__edit_mode_available'},'*');
-  },[]);
-
   useEffect(()=>{
     const load = async () => {
       try {
