@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": 3006,
+      "tag": "TECNOLOGÍA",
+      "date": "2026-04-21",
+      "title": "GitHub introduce Artifact Attestations por defecto en nuevos repos públicos",
+      "summary": "GitHub activa de forma predeterminada Artifact Attestations para repos públicos nuevos, mejorando la trazabilidad de builds y reduciendo riesgo en cadena de suministro de software.",
+      "body": "GitHub anunció el 21 de abril de 2026 un cambio orientado a reforzar la seguridad de la cadena de suministro en proyectos open source y repos públicos.\n\n# Qué pasó\n\nLa plataforma empezó a habilitar por defecto Artifact Attestations en repos públicos de nueva creación. Esto permite asociar metadatos verificables al artefacto generado en CI/CD, como origen del build, workflow ejecutado y hash resultante.\n\n# Qué significa / impacto\n\nEl cambio reduce la opacidad habitual del proceso de compilación y publicación. Equipos que consumen binarios podrán verificar de forma más sencilla si un artefacto realmente proviene de un pipeline legítimo y no de una ejecución alterada.\n\nA nivel práctico, esto mejora auditorías, respuesta a incidentes y cumplimiento en entornos donde ya se exige trazabilidad de software.\n\n# Qué hacer ahora\n\n1. Revisa tus workflows para generar y publicar attestation junto al artefacto\n2. Configura verificación en el lado consumidor antes de desplegar en producción\n3. Documenta el proceso para que el equipo sepa validar origen e integridad\n4. Añade checks de política para bloquear artefactos sin prueba verificable\n\n# Conclusión\n\nNo es solo una mejora técnica aislada: es un paso claro hacia un modelo de software verificable por defecto. Adoptarlo pronto te da ventaja operativa y reduce exposición a ataques de supply chain.",
+      "severity": null,
+      "cvss": null,
+      "readTime": "3 min"
+    },
+    {
       "id": 3005,
       "tag": "IA",
       "date": "2026-04-17",
