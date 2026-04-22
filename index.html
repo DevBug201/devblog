@@ -37,46 +37,37 @@ body {
 ::-webkit-scrollbar-track { background: #fff; }
 ::-webkit-scrollbar-thumb { background: #000; }
 
-/* ticker */
 @keyframes ticker { to { transform: translateX(-50%); } }
 .tick { animation: ticker 36s linear infinite; white-space: nowrap; display: inline-block; }
 .tick:hover { animation-play-state: paused; }
 
-/* blink */
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 .blink { animation: blink 1s step-end infinite; }
 
-/* enter */
 @keyframes up { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
 .enter { animation: up .38s cubic-bezier(.22,1,.36,1) both; }
 
-/* page */
 @keyframes pIn { from{opacity:0;transform:translateX(18px)} to{opacity:1;transform:translateX(0)} }
 .pIn { animation: pIn .26s cubic-bezier(.22,1,.36,1) both; }
 
-/* progress */
 @keyframes prog { from{width:0} to{width:100%} }
 .prog { animation: prog .6s ease-out forwards; }
 
-/* shake */
 @keyframes shake {
   0%,100%{transform:translateX(0)}
   20%{transform:translateX(-8px)} 40%{transform:translateX(8px)}
   60%{transform:translateX(-5px)} 80%{transform:translateX(5px)}
 }
 
-/* hover card */
 .card { transition: transform .08s, box-shadow .08s; cursor: pointer; }
 .card:hover { transform: translate(-4px,-4px); }
 
-/* modal */
 .modal {
   position: fixed; inset: 0; z-index: 8000;
   background: rgba(255,255,255,.95);
   display: flex; align-items: center; justify-content: center;
 }
 
-/* tag flash for breach */
 @keyframes flash { 0%,100%{opacity:1} 50%{opacity:.5} }
 
 .page-shell {
